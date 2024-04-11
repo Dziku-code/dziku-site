@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const links = [
   { url: "/", title: "HOME" },
@@ -13,20 +14,21 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
+    /*LINKS*/
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-      <div className="hidden md:flex gap-4">
-      {links.map((link) => (
-              <a
-                href={link.url}
-                key={link.title}
-                className="text-white no-underline hover:underline"
-              >
-                {link.title}
-              </a>
-      ))}
+      <div className="hidden md:flex gap-4 w-1/3">
+        {links.map((link) => (
+          <a
+            href={link.url}
+            key={link.title}
+            className="text-white no-underline hover:underline"
+          >
+            {link.title}
+          </a>
+        ))}
       </div>
       {/* LOGO */}
-      <div className="md:hidden">
+      <div className="md:hidden lg:flex w-1/3 items-center justify-center">
         <Link
           href="/"
           className="text-sm bg-black rounded-md p-1 font-mono font-semibold flex items-center justify-center"
@@ -37,6 +39,22 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
+      {/* Socials */}
+      <div className="hidden lg:flex gap-4 w-1/3 justify-end">
+        <Link href="#">
+          <Image src="/github.png" alt="" width={24} height={24} />
+        </Link>
+        <Link href="#">
+          <Image src="/instagram.png" alt="" width={24} height={24} />
+        </Link>
+        <Link href="">
+          <Image src="/twitch.png" alt="" width={24} height={24} />
+        </Link>
+        <Link href="#">
+          <Image src="/pinterest.png" alt="" width={24} height={24} />
+        </Link>
+      </div>
+
       {/* Responsive Menu */}
       <div className="md:hidden">
         {/* Menu Button */}
