@@ -46,22 +46,34 @@ const Navbar = () => {
   };
 
   const linksVariants = {
-    closed:{
-      x:"100vw",
+    closed: {
+      x: "100vw",
       transition: {
         duration: 0.5, // adjust the timing to suit your needs
         ease: "easeInOut",
-      }
+      },
     },
-    opened:{
-      x:"0",
+    opened: {
+      x: "0",
       transition: {
         duration: 0.5, // adjust the timing to suit your needs
         ease: "easeInOut",
-      }
-    }
+        staggerChildren:0.2,
+        when:"beforeChildren",
+      },
+    },
   };
 
+  const menuListVariants = {
+    closed: {
+      opacity: 0,
+    },
+    opened: {
+      opacity: 1,
+      transition:{
+      }
+    },
+  };
 
   return (
     /*LINKS*/
@@ -123,17 +135,26 @@ const Navbar = () => {
           ></motion.div>
         </button>
         {/* Menu List */}
-          <motion.div variants={linksVariants} initial="closed" animate={open ? "opened" : "closed"} className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex items-center flex-col justify-center gap-8 text-4xl z-40">
-            {links.map((link) => (
+        <motion.div
+          variants={linksVariants}
+          initial="closed"
+          animate={open ? "opened" : "closed"}
+          className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex items-center flex-col justify-center gap-8 text-4xl z-40"
+        >
+          {links.map((link) => (
+            <motion.div
+              variants={menuListVariants}
+              key={link.title}
+            >
               <a
                 href={link.url}
-                key={link.title}
                 className="text-white no-underline hover:underline"
               >
                 {link.title}
               </a>
-            ))}
-          </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
