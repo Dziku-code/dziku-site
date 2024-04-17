@@ -48,6 +48,7 @@ const Navbar = () => {
   const linksVariants = {
     closed: {
       x: "100vw",
+      style:"",
       transition: {
         duration: 0.5, // adjust the timing to suit your needs
         ease: "easeInOut",
@@ -139,7 +140,7 @@ const Navbar = () => {
           variants={linksVariants}
           initial="closed"
           animate={open ? "opened" : "closed"}
-          className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex items-center flex-col justify-center gap-8 text-4xl z-40"
+          className=" fixed top-0 left-0 w-screen h-screen bg-black text-white flex items-center flex-col justify-center gap-8 text-4xl z-40"
         >
           {links.map((link) => (
             <motion.div
