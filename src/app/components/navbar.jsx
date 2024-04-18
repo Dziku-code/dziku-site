@@ -78,8 +78,8 @@ const Navbar = () => {
 
   return (
     /*LINKS*/
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-      <div className="hidden md:flex gap-4 w-1/3">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
+      <div className="hidden md:flex gap-4 w-1/3 ">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
@@ -88,9 +88,9 @@ const Navbar = () => {
       <div className="md:hidden lg:flex xl:w-1/3 items-center xl:justify-center">
         <Link
           href="/"
-          className="text-sm bg-black rounded-md p-1 font-mono font-semibold flex items-center justify-center"
+          className="text-sm bg-black rounded-md p-1 font-mono font-semibold flex items-center justify-center "
         >
-          <span className="text-white mr-1">Dzik</span>
+          <span className="text-white mr-1 ">Dzik</span>
           <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">
             .dev
           </span>

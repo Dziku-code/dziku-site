@@ -12,9 +12,9 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/*Container*/}
-      <div className="flex  flex-row">
+      <div className="flex  flex-row overflow-scroll lg:flex">
         {/*Text Container*/}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:w-2/3 xl:w-1/2 lg:p-right-0">
           {/*Biography  Container*/}
           <div className="flex flex-col gap-12 justify-center">
             {/*Biography  Title*/}
@@ -205,25 +205,84 @@ const AboutPage = () => {
             {/*EXPIERANCE  List*/}
             <div className="">
               {/*EXPIERANCE  List Item*/}
-              <div className="">
+              <div className="flex justify-betweem h-48">
                 {/*LEFT*/}
-                <div className="">
+                <div className="w-1/3">
                   {/*Job tittle*/}
-                  <div className="">
-                    {/*JOB DESC*/}
-                    <div className=""></div>
+                  <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
+                    FREELANCER{" "}
+                  </div>
+                  {/*JOB DESC*/}
+                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  {/*JOB TIME*/}
+                  <div className="p-3  text-red-400 text-sm italic">
+                    2024-present
+                  </div>
+                  {/*JOB NAME*/}
+                  <div className="p-3 text-sm font-semibold w-fit">
+                    SELFWORK
                   </div>
                 </div>
                 {/*CENTER*/}
-                <div className="">
+                <div className="w-1/6">
+                  {/*LINE*/}
+                  <div className="w-1 h-full bg-black rounded relative">
+                    {/*LINE CIRCLE*/}
+                    <div className="absolute h-5 w-5 rounded-full ring-4 ring-red-600 -left-2 bg-red-600"></div>
+                  </div>
+                </div>
+                {/*RIGHT*/}
+                <div className="w-1/3 bg-red-300">
                   {/*Job tittle*/}
                   <div className="">
                     {/*JOB DESC*/}
                     <div className=""></div>
                   </div>
                 </div>
+              </div>
+              {/*EXPIERANCE  List Item 2*/}
+              <div className="flex justify-betweem h-48">
+                {/*LEFT*/}
+                <div className="w-1/3"></div>
+                {/*CENTER*/}
+                <div className="w-1/6">
+                  {/*LINE*/}
+                  <div className="w-1 h-full bg-black rounded relative">
+                    {/*LINE CIRCLE*/}
+                    <div className="absolute h-5 w-5 rounded-full ring-4 ring-red-600 -left-2 bg-red-600"></div>
+                  </div>
+                </div>
                 {/*RIGHT*/}
-                <div className="">
+                <div className="w-1/3">
+                  {/*Job tittle*/}
+                  <div className="">FREELANCER </div>
+                  {/*JOB DESC*/}
+                  <div className="">hjdksahdjk</div>
+                  {/*JOB DESC*/}
+                  <div className="">hjdksahdjk</div>
+                </div>
+              </div>
+              {/*EXPIERANCE  List Item 3*/}
+              <div className="flex justify-betweem h-48">
+                {/*LEFT*/}
+                <div className="w-1/3">
+                  {/*Job tittle*/}
+                  <div className="">FREELANCER </div>
+                  {/*JOB DESC*/}
+                  <div className="">hjdksahdjk</div>
+                  {/*JOB DESC*/}
+                  <div className="">hjdksahdjk</div>
+                </div>
+                {/*CENTER*/}
+                <div className="w-1/6">
+                  {/*LINE*/}
+                  <div className="w-1 h-1 bg-black rounded relative">
+                    {/*LINE CIRCLE*/}
+                    <div className="absolute h-5 w-5 rounded-full ring-4 ring-red-600 -left-2 bg-red-600"></div>
+                  </div>
+                </div>
+                {/*RIGHT*/}
+                <div className="w-1/3">
                   {/*Job tittle*/}
                   <div className="">
                     {/*JOB DESC*/}
@@ -232,40 +291,18 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-            {/* Expierance SCROLL SVG 
-            <motion.svg
-              initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              width={50}
-              height={50}
-            >
-              <path
-                d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
-              <path
-                d="M15 11L12 14L9 11"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-            </motion.svg>*/}
           </div>
-
-          <div className="lg:h-1/2 lg:w-1/2 lg:flex-row md:h-1/4 md:w-1/4 justify-content items-center">
+{
+          <div className="lg:block w-1/3 xl:w-1/2 ">
             <Image
               src="/brain-rn.png"
               alt="brain image"
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               className="object-contain"
             />
           </div>
+          }
         </div>
       </div>
     </motion.div>
