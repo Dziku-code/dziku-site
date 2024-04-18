@@ -1,9 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion, useInView, useScroll } from "framer-motion";
+import Brain from "../components/brain";
+import { useRef } from "react";
 
 const AboutPage = () => {
+  const containerRef = useRef();
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+  const isSkillRefInView = useInView( skillRef, {margin:"-100px"});
   return (
     <motion.div
       className="h-full"
@@ -12,7 +18,7 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/*Container*/}
-      <div className="flex  flex-row overflow-scroll lg:flex">
+      <div className="flex  flex-row overflow-scroll lg:flex" ref={containerRef}>
         {/*Text Container*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:w-2/3 xl:w-1/2 lg:p-right-0">
           {/*Biography  Container*/}
@@ -141,9 +147,16 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/*Skill Container*/}
-          <div className="flex flex-col gap-12 jusify-center">
+          <div className="flex flex-col gap-12 jusify-center " ref={skillRef}>
             {/*SKILLS  Title*/}
-            <h1 className="font-bold text-2xl">SKILLS</h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              SKILLS
+            </motion.h1>
             {/*SKILLS  LIST*/}
             <div className="flex flex-wrap gap-4 hover:bg-white hover:text-black rounded ">
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
@@ -292,18 +305,10 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-{
-          <div className="lg:block w-1/3 xl:w-1/2 ">
-            <Image
-              src="/brain-rn.png"
-              alt="brain image"
-              width={1000}
-              height={1000}
-              className="object-contain"
-            />
-          </div>
-          }
         </div>
+        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:/2">
+            <Brain scrollYProgress={scrollYProgress} />
+          </div>
       </div>
     </motion.div>
   );
