@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useScroll } from "framer-motion";
+import { easeOut, motion, useInView, useScroll } from "framer-motion";
 import Brain from "../components/brain";
 import { useRef } from "react";
 
@@ -9,9 +9,15 @@ const AboutPage = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const isSkillRefInView = useInView(skillRef, {
+    once: true,
+    margin: "-100px",
+  });
   const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const isExperienceRefInView = useInView(experienceRef, {
+    once: true,
+    margin: "-100px",
+  });
 
   return (
     <motion.div
@@ -21,7 +27,10 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/*Container*/}
-      <div className=" h-full overflow-scroll lg:flex lg:p-right-0" ref={containerRef}>
+      <div
+        className=" h-full overflow-scroll lg:flex lg:p-right-0"
+        ref={containerRef}
+      >
         {/*Text Container*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 xl:w-1/2 ">
           {/*Biography  Container*/}
@@ -162,33 +171,82 @@ const AboutPage = () => {
             </motion.h1>
             {/*SKILLS  LIST*/}
             <div className="flex flex-wrap gap-4 hover:bg-white hover:text-black rounded ">
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{
+                  ease: "easeOut",
+                  delay: 0.4,
+                  restDelta: Infinity,
+                }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 JavaScript
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 0.5, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 React
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 0.6, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 Tailwind
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 0.7, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 HTML
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 0.8, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 CSS
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 0.9, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 MongoDB
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 1, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 Node.js
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 1.1, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 C++
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 1.2, repeat: 1 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
                 Unity/Unreal
-              </div>
+              </motion.div>
             </div>
             {/* SKILLS SCROLL SVG */}
             <motion.svg
@@ -215,9 +273,19 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/*Expierance Container*/}
-          <div className="flex flex-col gap-12 jusify-center padding-48" ref={{isExperienceRefInView}}>
+          <div
+            className="flex flex-col gap-12 jusify-center padding-48"
+            ref={experienceRef}
+          >
             {/*EXPIERANCE  Title*/}
-            <h1 className="font-bold text-2xl">EXPIERANCE</h1>
+            <motion.h1
+              initial={{ x: "-5000px" }}
+              animate={isExperienceRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              Expierance/University
+            </motion.h1>
             {/*EXPIERANCE  List*/}
             <div className="">
               {/*EXPIERANCE  List Item*/}
@@ -248,7 +316,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/*RIGHT*/}
-                <div className="w-1/3 bg-red-300">
+                <div className="w-1/3 ">
                   {/*Job tittle*/}
                   <div className="">
                     {/*JOB DESC*/}
@@ -271,11 +339,19 @@ const AboutPage = () => {
                 {/*RIGHT*/}
                 <div className="w-1/3">
                   {/*Job tittle*/}
-                  <div className="">FREELANCER </div>
+                  <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
+                    FREELANCER{" "}
+                  </div>
                   {/*JOB DESC*/}
-                  <div className="">hjdksahdjk</div>
-                  {/*JOB DESC*/}
-                  <div className="">hjdksahdjk</div>
+                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  {/*JOB TIME*/}
+                  <div className="p-3  text-red-400 text-sm italic">
+                    2024-present
+                  </div>
+                  {/*JOB NAME*/}
+                  <div className="p-3 text-sm font-semibold w-fit">
+                    SELFWORK
+                  </div>
                 </div>
               </div>
               {/*EXPIERANCE  List Item 3*/}
@@ -283,11 +359,19 @@ const AboutPage = () => {
                 {/*LEFT*/}
                 <div className="w-1/3">
                   {/*Job tittle*/}
-                  <div className="">FREELANCER </div>
+                  <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
+                    FREELANCER{" "}
+                  </div>
                   {/*JOB DESC*/}
-                  <div className="">hjdksahdjk</div>
-                  {/*JOB DESC*/}
-                  <div className="">hjdksahdjk</div>
+                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  {/*JOB TIME*/}
+                  <div className="p-3  text-red-400 text-sm italic">
+                    2024-present
+                  </div>
+                  {/*JOB NAME*/}
+                  <div className="p-3 text-sm font-semibold w-fit">
+                    SELFWORK
+                  </div>
                 </div>
                 {/*CENTER*/}
                 <div className="w-1/6">
@@ -309,10 +393,10 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-         {/* SVG CONTAINER */}
+        {/* SVG CONTAINER */}
         <div className="hidden lg:block w-1/3 sticky right-0 top-0 z-30 xl:w-1/2 ">
-            <Brain scrollYProgress={scrollYProgress} />
-          </div>
+          <Brain scrollYProgress={scrollYProgress} />
+        </div>
       </div>
     </motion.div>
   );
