@@ -28,7 +28,7 @@ const AboutPage = () => {
     >
       {/*Container*/}
       <div
-        className=" h-full overflow-scroll lg:flex lg:p-right-0"
+        className="no-scrollbar h-full overflow-scroll lg:overflow-auto lg:flex lg:p-right-0"
         ref={containerRef}
       >
         {/*Text Container*/}
@@ -186,7 +186,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.5, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 0.5,}}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 React
@@ -194,7 +194,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.6, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 0.6 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 Tailwind
@@ -202,7 +202,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.7, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 0.7,}}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 HTML
@@ -210,7 +210,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.8, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 0.8,}}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 CSS
@@ -218,7 +218,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.9, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 0.9,}}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 MongoDB
@@ -226,7 +226,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 1, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 1 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 Node.js
@@ -234,7 +234,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 1.1, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 1.1,}}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 C++
@@ -242,10 +242,18 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 1.2, repeat: 1 }}
+                transition={{ ease: "easeOut", delay: 1.2 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 Unity/Unreal
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isSkillRefInView ? { opacity: 1 } : {}}
+                transition={{ ease: "easeOut", delay: 1.3 }}
+                className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
+              >
+                Next
               </motion.div>
             </div>
             {/* SKILLS SCROLL SVG */}
@@ -297,7 +305,7 @@ const AboutPage = () => {
                     FREELANCER{" "}
                   </div>
                   {/*JOB DESC*/}
-                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  <div className="p-3  text-sm italic">Creating Websites, discord servers for my clients.</div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
                     2024-present
@@ -340,13 +348,18 @@ const AboutPage = () => {
                 <div className="w-1/3">
                   {/*Job tittle*/}
                   <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
-                    FREELANCER{" "}
+                    INTERN{" "}
                   </div>
                   {/*JOB DESC*/}
-                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  <div className="p-3  text-sm italic">
+                    Lorem Ipsum jest tekstem stosowanym jako przykładowy
+                    wypełniacz w przemyśle poligraficznym. Został po raz
+                    pierwszy użyty w XV w. przez nieznanego drukarza do
+                    wypełnienia tekstem próbnej książki.
+                  </div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
-                    2024-present
+                  June to October 2022
                   </div>
                   {/*JOB NAME*/}
                   <div className="p-3 text-sm font-semibold w-fit">
@@ -360,17 +373,22 @@ const AboutPage = () => {
                 <div className="w-1/3">
                   {/*Job tittle*/}
                   <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
-                    FREELANCER{" "}
+                    Student
                   </div>
                   {/*JOB DESC*/}
-                  <div className="p-3  text-sm italic">hjdksahdjk</div>
+                  <div className="p-3  text-sm italic">
+                    Lorem Ipsum jest tekstem stosowanym jako przykładowy
+                    wypełniacz w przemyśle poligraficznym. Został po raz
+                    pierwszy użyty w XV w. przez nieznanego drukarza do
+                    wypełnienia tekstem próbnej książki.
+                  </div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
-                    2024-present
+                    2019-2023
                   </div>
                   {/*JOB NAME*/}
                   <div className="p-3 text-sm font-semibold w-fit">
-                    SELFWORK
+                    Bachelor's degree
                   </div>
                 </div>
                 {/*CENTER*/}

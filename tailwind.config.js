@@ -14,5 +14,36 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+  plugins: [
+    require('tailwind-scrollbar'),
+/*
+    function({ addUtilities }) {
+      const newScrollbar = {
+        
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgb(0,0,0) white" // Also added the track color for better visibility
+        },
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar": {
+            width: "15px"
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "rgb(255,255,255)"
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "rgb(0,0,0)",
+            borderRadius: "20px",
+            border: "1px solid white"
+          }
+        }
+        
+        ".invisible-scrollbar::-webkit-scrollbar":{
+          display: none
+        }
+      }
+      addUtilities(newScrollbar, ["responsive", "hover"])
+    }
+    */
+  ]
+}
