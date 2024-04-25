@@ -2,11 +2,37 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 
 const ContactPage = () => {
-  const [succes, setSucess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const text = "Say Hello";
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          form.current.reset();
+        },
+        () => {
+          setError(true);
+        }
+      );
+  };
+
   return (
     <motion.div
       className="h-full"
@@ -14,9 +40,9 @@ const ContactPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full w-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 ">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-16 xl:px-48 ">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl ">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -36,25 +62,41 @@ const ContactPage = () => {
           </div>
         </div>
         {/* FORM CONTAINER */}
-        <form className="h-1/2 lg:h-full lg:w-1/2 flex flex-col py-5 justify-center bg-red-50 rounded-xl text-xl gap-8 p-24">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+        >
           <span> Dear Dziku Dev,</span>
           <textarea
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            name="user_message"
           />
           <span> My mail adress is:</span>
           <input
-            rows={6}
+            name="user_email"
+            type="text"
             className="bg-transparent border-b-2 border-b-black outline-none "
           />
           <span> Kind regards</span>
           <div className="flex justify-center">
-            <button className="rounded bg-black text-white w-1/6   semi-bold ">
+            <button
+              className="rounded bg-black text-white w-1/5 hover:bg-white hover:text-black hover:cursor-pointer semi-bold "
+            >
               SEND
             </button>
-            {succes && <span className="text-green-600 semi-bold">Your message sent succesfully</span>}
-            {error && <span className="text-red-600 semi-bold">Something goes wrong...</span>}
           </div>
+          {success && (
+            <span className="text-green-600 font-semibold">
+              Your message sent succesfully
+            </span>
+          )}
+          {error && (
+            <span className="text-red-600 font-semibold">
+              Something goes wrong...
+            </span>
+          )}
         </form>
       </div>
     </motion.div>
