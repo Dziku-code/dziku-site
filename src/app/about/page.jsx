@@ -28,11 +28,11 @@ const AboutPage = () => {
     >
       {/*Container*/}
       <div
-        className="no-scrollbar h-full overflow-scroll lg:overflow-auto lg:flex lg:p-right-0"
+        className="no-scrollbar h-full overflow-scroll lg:overflow-auto lg:flex lg:p-right-10"
         ref={containerRef}
       >
         {/*Text Container*/}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 xl:w-1/2 ">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-48 lg:w-2/3 xl:w-1/2 ">
           {/*Biography  Container*/}
           <div className="flex flex-col gap-12 justify-center">
             {/*Biography  Title*/}
@@ -282,7 +282,7 @@ const AboutPage = () => {
           </div>
           {/*Expierance Container*/}
           <div
-            className="flex flex-col gap-12 jusify-center padding-48"
+            className="flex flex-col gap-12 jusify-center padding-48 "
             ref={experienceRef}
           >
             {/*EXPIERANCE  Title*/}
@@ -316,7 +316,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 pl-5">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-black rounded relative">
                     {/*LINE CIRCLE*/}
@@ -337,7 +337,7 @@ const AboutPage = () => {
                 {/*LEFT*/}
                 <div className="w-1/3"></div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 pl-5">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-black rounded relative">
                     {/*LINE CIRCLE*/}
@@ -392,7 +392,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 pl-5">
                   {/*LINE*/}
                   <div className="w-1 h-1 bg-black rounded relative">
                     {/*LINE CIRCLE*/}
