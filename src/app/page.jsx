@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const Homepage = () => {
 
@@ -37,10 +37,10 @@ const Homepage = () => {
           </p>
           <div className="flex gap-4 lg:w-full md:justify-content">
             <button className=" p-4 rounded-lg ring-1 ring-black bg-black text-white">
-              View my work
+             <Link href="/portfolio">View my work</Link>
             </button>
             <button className="p-4 rounded-lg ring-1 ring-black bg-white text-black">
-              Contact me
+              <Link href="/contact">Contact me</Link>
             </button>
           </div>
         </div>

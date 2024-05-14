@@ -39,20 +39,13 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/*Biography  Text*/}
             <p className="text-lg">
-              Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-              przemyśle poligraficznym. Został po raz pierwszy użyty w XV w.
-              przez nieznanego drukarza do wypełnienia tekstem próbnej książki.
-              Pięć wieków później zaczął być używany przemyśle elektronicznym,
-              pozostając praktycznie niezmienionym. Spopularyzował się w latach
-              60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających
-              fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje
-              Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na
-              komputerach osobistych, jak Aldus PageMaker
+              I have always been interested in techneology and art. Programming
+              gives me the opportunity to do both. I have been creating websites
+              and bots since my student days. I am not afraid of challenges and
+              always focus on quality.
             </p>
 
-            <span className="italic">
-              Loren impsum dolor sit amet construction
-            </span>
+            <span className="italic">In order to win you have to play</span>
             {/*Biography  Signature*/}
             <div className="self-end">
               <svg
@@ -186,7 +179,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.5,}}
+                transition={{ ease: "easeOut", delay: 0.5 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 React
@@ -202,7 +195,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.7,}}
+                transition={{ ease: "easeOut", delay: 0.7 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 HTML
@@ -210,7 +203,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.8,}}
+                transition={{ ease: "easeOut", delay: 0.8 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 CSS
@@ -218,7 +211,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 0.9,}}
+                transition={{ ease: "easeOut", delay: 0.9 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 MongoDB
@@ -234,7 +227,7 @@ const AboutPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
-                transition={{ ease: "easeOut", delay: 1.1,}}
+                transition={{ ease: "easeOut", delay: 1.1 }}
                 className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black ring-1 ring-black-"
               >
                 C++
@@ -305,7 +298,9 @@ const AboutPage = () => {
                     FREELANCER{" "}
                   </div>
                   {/*JOB DESC*/}
-                  <div className="p-3  text-sm italic">Creating Websites, discord servers for my clients.</div>
+                  <div className="p-3  text-sm italic">
+                    Creating Websites, discord servers for my clients.
+                  </div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
                     2024-present
@@ -344,7 +339,6 @@ const AboutPage = () => {
                     <div className="absolute h-5 w-5 rounded-full ring-4 ring-red-600 -left-2 bg-red-600"></div>
                   </div>
                 </div>
-                {/*RIGHT*/}
                 <div className="w-1/3">
                   {/*Job tittle*/}
                   <div className="bg-black text-white p-3 font-semibold rounded-b-lg rounded-s-lg w-fit">
@@ -352,19 +346,15 @@ const AboutPage = () => {
                   </div>
                   {/*JOB DESC*/}
                   <div className="p-3  text-sm italic">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy
-                    wypełniacz w przemyśle poligraficznym. Został po raz
-                    pierwszy użyty w XV w. przez nieznanego drukarza do
-                    wypełnienia tekstem próbnej książki.
+                    Dealing with the control of the devices. Fixing errors and
+                    communicating with the customer
                   </div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
-                  June to October 2022
+                    June to October 2022
                   </div>
                   {/*JOB NAME*/}
-                  <div className="p-3 text-sm font-semibold w-fit">
-                    SELFWORK
-                  </div>
+                  <div className="p-3 text-sm font-semibold w-fit">Rewolt</div>
                 </div>
               </div>
               {/*EXPIERANCE  List Item 3*/}
@@ -377,18 +367,17 @@ const AboutPage = () => {
                   </div>
                   {/*JOB DESC*/}
                   <div className="p-3  text-sm italic">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy
-                    wypełniacz w przemyśle poligraficznym. Został po raz
-                    pierwszy użyty w XV w. przez nieznanego drukarza do
-                    wypełnienia tekstem próbnej książki.
+                    Computer software development, web-masters. Pedagogical
+                    skills, operation of cnc machines.
                   </div>
                   {/*JOB TIME*/}
                   <div className="p-3  text-red-400 text-sm italic">
                     2019-2023
                   </div>
                   {/*JOB NAME*/}
-                  <div className="p-3 text-sm font-semibold w-fit">
-                    Bachelor's degree
+                  <div className="p-6 text-sm font-semibold w-fit">
+                    Bachelor's degree Education in Technology and Computer
+                    Science
                   </div>
                 </div>
                 {/*CENTER*/}

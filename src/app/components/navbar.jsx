@@ -98,7 +98,7 @@ const Navbar = () => {
       </div>
       {/* Socials */}
       <div className="hidden lg:flex gap-4 w-1/3 justify-end">
-        <Link href="#">
+        <Link href="https://github.com/Dziku-code/DariuszPazdur17">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="#">
