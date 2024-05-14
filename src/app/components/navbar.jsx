@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import NavLink from "./navLinks";
 import { motion } from "framer-motion";
+import ThemeSwitcher from "./themeSwitcher";
 
 const links = [
   { url: "/", title: "HOME" },
@@ -48,7 +49,7 @@ const Navbar = () => {
   const linksVariants = {
     closed: {
       x: "100vw",
-      style:"",
+      style: "",
       transition: {
         duration: 0.5, // adjust the timing to suit your needs
         ease: "easeInOut",
@@ -59,8 +60,8 @@ const Navbar = () => {
       transition: {
         duration: 0.5, // adjust the timing to suit your needs
         ease: "easeInOut",
-        staggerChildren:0.2,
-        when:"beforeChildren",
+        staggerChildren: 0.2,
+        when: "beforeChildren",
       },
     },
   };
@@ -71,8 +72,7 @@ const Navbar = () => {
     },
     opened: {
       opacity: 1,
-      transition:{
-      }
+      transition: {},
     },
   };
 
@@ -96,19 +96,48 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
+      {/* Theme Switch */}
+      <div className="md:hidden lg:block">
+        <ThemeSwitcher />
+      </div>
+
       {/* Socials */}
-      <div className="hidden lg:flex gap-4 w-1/3 justify-end">
+      <div className="hidden lg:flex gap-4 w-1/3 justify-end dark:white">
         <Link href="https://github.com/Dziku-code/DariuszPazdur17">
-          <Image src="/github.png" alt="" width={24} height={24} />
+          <Image
+            src="/github.png"
+            alt=""
+            width={24}
+            height={24}
+            className="dark:filter dark:invert"
+          />
         </Link>
         <Link href="#">
-          <Image src="/instagram.png" alt="" width={24} height={24} />
+          <Image
+            src="/instagram.png"
+            alt=""
+            width={24}
+            height={24}
+            className="dark:filter dark:invert"
+          />
         </Link>
         <Link href="">
-          <Image src="/twitch.png" alt="" width={24} height={24} />
+          <Image
+            src="/twitch.png"
+            alt=""
+            width={24}
+            height={24}
+            className="dark:filter dark:invert"
+          />
         </Link>
         <Link href="#">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
+          <Image
+            src="/pinterest.png"
+            alt=""
+            width={24}
+            height={24}
+            className="dark:filter dark:invert"
+          />
         </Link>
       </div>
 
@@ -143,10 +172,7 @@ const Navbar = () => {
           className=" fixed top-0 left-0 w-screen h-screen bg-black text-white flex items-center flex-col justify-center gap-8 text-4xl z-40"
         >
           {links.map((link) => (
-            <motion.div
-              variants={menuListVariants}
-              key={link.title}
-            >
+            <motion.div variants={menuListVariants} key={link.title}>
               <a
                 href={link.url}
                 className="text-white no-underline hover:underline"

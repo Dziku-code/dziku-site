@@ -67,29 +67,27 @@ const ContactPage = () => {
           onSubmit={sendEmail}
           className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
         >
-          <span> Dear Dziku Dev,</span>
+          <span className="text-black"> Dear Dziku Dev,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none text-black"
             name="user_message"
           />
-          <span> My mail adress is:</span>
+          <span className="text-black"> My mail address is:</span>
           <input
             name="user_email"
             type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none "
+            className="bg-transparent border-b-2 border-b-black outline-none text-black"
           />
-          <span> Kind regards</span>
+          <span className="text-black"> Kind regards</span>
           <div className="flex justify-center">
-            <button
-              className="rounded bg-black text-white w-1/5 hover:bg-white hover:text-black hover:cursor-pointer semi-bold "
-            >
+            <button className="rounded bg-black text-white w-1/5 hover:bg-white hover:text-black hover:cursor-pointer semi-bold">
               SEND
             </button>
           </div>
           {success && (
             <span className="text-green-600 font-semibold">
-              Your message sent succesfully
+              Your message sent successfully
             </span>
           )}
           {error && (

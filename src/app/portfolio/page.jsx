@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,11 +48,11 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     // Add 'no-scrollbar' class to 'html' element to prevent scrolling
-    document.documentElement.classList.add('no-scrollbar');
+    document.documentElement.classList.add("no-scrollbar");
 
     return () => {
       // Remove 'no-scrollbar' class when component unmounts
-      document.documentElement.classList.remove('no-scrollbar');
+      document.documentElement.classList.remove("no-scrollbar");
     };
   }, []);
 
@@ -87,7 +86,9 @@ const PortfolioPage = () => {
                     {item.desc}
                   </p>
                   <Link href={item.link} className="flex justify-end ml-10">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Demo</button>
+                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                      See Demo
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -111,7 +112,10 @@ const PortfolioPage = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
+              <textPath
+                xlinkHref="#circlePath"
+                className="text-xl dark:fill-white"
+              >
                 Front-end Developer and UI Designer
               </textPath>
             </text>

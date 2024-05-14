@@ -11,5 +11,29 @@
     .no-scrollbar {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+
   }
 }
+
+:root {
+    --bg-color: #e0e8f3;
+    --text-color: #000000;
+  }
+  
+  [data-dark-mode="true"] {
+    --bg-color: #22272e;
+    --text-color: #f5f5f5;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .svg-stroke {
+    stroke: #1E1E1E; /* Default stroke color */
+  }
+  
+  .dark .svg-stroke {
+    stroke: white; /* Stroke color in dark mode */
+  }

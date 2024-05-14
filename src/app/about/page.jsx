@@ -57,73 +57,73 @@ const AboutPage = () => {
               >
                 <path
                   d="M112 2C105.372 29.4178 93.5677 55.4647 82.2222 81.1667C68.6353 111.946 56.3205 145.042 38 173.444C36.8516 175.225 33.2413 180.433 34.2222 178.556C41.059 165.468 48.3473 153.209 54.5556 139.667C64.5251 117.919 68.895 106.372 76.9444 83.8333C83.8974 64.365 89.1637 43.5821 99.8889 25.6667C108.836 10.7209 120.451 0.576138 138.444 3.22222C157.04 5.95689 174.228 15.1035 176.889 35.5556C182.296 77.1117 155.532 112.947 123.889 136.278C87.164 163.355 44.5513 177.362 2 192"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M140 130C159.607 129.689 178.652 126.772 198.111 125.111C218.787 123.346 159.308 139.858 139.667 146.556C132.889 148.867 123.381 151.661 119 158.111C115.085 163.875 127.761 161.966 129 161.889C156.158 160.196 183.211 154.541 210 150"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M224 108C225.958 122.282 227 136.583 227 151"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M232 90H232"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M280 41C278.96 53.4762 277.061 66.0645 274.667 78.3333C272.227 90.8391 269.13 104.455 264.667 116.444C262.834 121.368 260.579 126.14 258.111 130.778C255.416 135.842 250.631 139.729 248.5 145.056C246.855 149.167 256.062 140.438 259.722 137.944C272.745 129.073 281.234 123.354 295.056 115.111C304.286 109.606 320.475 98 332 98"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M265 138C270.406 144.308 275.429 150.753 283.611 153.667C296.91 158.402 311.818 153.711 321.111 143.444C322.115 142.335 323.347 140.503 323.778 138.889C324.454 136.353 322.771 144.051 322.556 146.667C322.41 148.436 321.848 153.077 322.611 155.111C323.977 158.754 329.427 156.743 332 157"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M318 136C318.429 142.146 322.748 168.581 332.222 163.167C337.644 160.069 357.248 144.871 352 137"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M457 39C450.822 72.7587 451.899 106.958 446.889 140.778C446.776 141.543 446.444 143.829 446.444 143.056C446.444 141.843 446.811 140.655 446.889 139.444C447.599 128.466 447.604 124.215 446.667 112.333C444.88 89.674 439.182 66.9103 446.333 44.5556C449.344 35.1443 457.289 15.6559 469.889 15.4444C488.254 15.1363 503.347 39.0447 505.556 54.6667C510.728 91.2552 480.929 123.705 453.444 142.778C434.301 156.062 413.119 163.145 391 169"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M478 127C483.872 133.655 504.325 125.07 510.056 123.056C515.46 121.155 523.924 117.912 528.944 114.222C529.849 113.558 531.652 112.469 531 111.556C530.276 110.542 528.445 111.453 527.278 111.889C524.423 112.956 521.672 114.348 519.111 116C511.73 120.761 501.874 128.951 496.111 135.444C492.567 139.439 480.887 153.761 494.889 153.667C507.383 153.582 519.541 146.034 530 140"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M544 118C543.485 120.19 542.51 122.271 541.778 124.389C539.964 129.637 533.71 143.179 536.944 148.5C540.667 154.623 587.969 105.165 594 99"
-                  stroke="#1E1E1E"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  className="svg-stroke"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -142,12 +142,19 @@ const AboutPage = () => {
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
                 stroke="#000000"
                 strokeWidth="1"
+                className="svg-stroke"
               ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+              <path
+                d="M12 6V14"
+                stroke="#000000"
+                strokeWidth="1"
+                className="svg-stroke"
+              ></path>
               <path
                 d="M15 11L12 14L9 11"
                 stroke="#000000"
                 strokeWidth="1"
+                className="svg-stroke"
               ></path>
             </motion.svg>
           </div>
@@ -163,7 +170,7 @@ const AboutPage = () => {
               SKILLS
             </motion.h1>
             {/*SKILLS  LIST*/}
-            <div className="flex flex-wrap gap-4 hover:bg-white hover:text-black rounded ">
+            <div className="flex flex-wrap gap-4">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isSkillRefInView ? { opacity: 1 } : {}}
@@ -260,16 +267,23 @@ const AboutPage = () => {
               width={50}
               height={50}
             >
-              <path
+               <path
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
                 stroke="#000000"
                 strokeWidth="1"
+                className="svg-stroke"
               ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+              <path
+                d="M12 6V14"
+                stroke="#000000"
+                strokeWidth="1"
+                className="svg-stroke"
+              ></path>
               <path
                 d="M15 11L12 14L9 11"
                 stroke="#000000"
                 strokeWidth="1"
+                className="svg-stroke"
               ></path>
             </motion.svg>
           </div>
