@@ -12,7 +12,7 @@ const items = [
     title: "LSM",
     desc: "The project presents a solution to enhance the operations of the B5 departmental library. It analyzes student needs and proposes improvements for students and university staff. The project is a web application built in React and connected to a Firebase database, containing library book records",
     img: "https://images.pexels.com/photos/3747500/pexels-photo-3747500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    link: "https://github.com/Dziku-code/LibraryManagmentSystem",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const items = [
     title: "Sudoku Solver",
     desc: "The application uses the Node.js startup environment and Express.js for user registration and login, which uses MongoDB for data storage and bcrypt for password hashing. App is to perform initial user authorization based on the data entered into the request.md file. If they match, then it lets the user through to the application's home page.",
     img: "https://images.pexels.com/photos/7257461/pexels-photo-7257461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    link: "https://dziku-code.github.io/Sudoku_Resolve_API/",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const items = [
     title: "Pig game",
     desc: "Players take turns to roll the dice and add the roll value to their current score unless they roll a 1, which ends their turn and resets their current score. Players can hold their score to add it to their global score; the first player to reach 100 points wins, and their theme changes to black.",
     img: "https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    link: "https://dziku-code.github.io/Pig-Game/",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const items = [
     title: "Flappy bird",
     desc: "Flappy Bird is an arcade-style game where players control a bird, navigating it through a series of pipes by tapping the screen to make the bird flap and stay airborne. The goal is to fly as far as possible without hitting the pipes, with each successful pass through a pair of pipes earning one point.",
     img: "https://images.pexels.com/photos/1365795/pexels-photo-1365795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    link: "https://simmer.io/@malaka/flappy-bird",
   },
 ];
 
